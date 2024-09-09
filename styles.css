@@ -1,0 +1,203 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Default font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in the element’s total width and height */
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif; /* Font for header title */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f0f0f0; /* Lighten color on hover */
+}
+
+section {
+    position: relative;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero {
+    background-color: blue;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-family: 'Montserrat', sans-serif; /* Font for hero section title */
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+.portfolio-preview {
+    background-color: white;
+    color: black;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-decoration: none;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay .text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.about {
+    background-color: white;
+    color: black;
+}
+
+.services {
+    background-color: blue;
+    color: white;
+}
+
+.services .service-item {
+    margin-bottom: 20px; /* Add spacing between service items */
+}
+
+.contact {
+    background-color: white;
+    color: black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer .social-icon {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-icon:hover {
+    color: #f0f0f0;
+}
+
+.about h2, .services h2, .contact h2 {
+    font-family: 'Montserrat', sans-serif; /* Font for section titles */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    section {
+        padding: 80px 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        padding: 60px 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 40px 10px;
+    }
+
+    .hero h2, .portfolio-preview h2, .about h2, .services h2, .contact h2 {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 20px 5px;
+    }
+
+    .hero h2, .portfolio-preview h2, .about h2, .services h2, .contact h2 {
+        font-size: 1.5rem; /* Further reduce font size for very small screens */
+    }
+}
+    
